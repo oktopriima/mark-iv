@@ -91,6 +91,7 @@ func (j *httpRequestJobContract) PostHttpRequest() {
 		panic(err)
 	}
 	request.Header.Set("Content-Type", "application/x-www-form-urlencoded")
+	request.Header.Set("Authorization", "Bearer TOKEN SECRET")
 
 	response, err := client.Do(request)
 	if err != nil {
