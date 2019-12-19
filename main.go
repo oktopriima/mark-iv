@@ -8,6 +8,7 @@ import (
 	"github.com/oktopriima/mark-iv/tasks"
 	"github.com/oktopriima/mark-v/configurations"
 	"github.com/oktopriima/mark-v/database"
+	"time"
 )
 
 // private variable declaration
@@ -53,8 +54,7 @@ func runningTask() {
 		panic(err)
 	}
 
-	//now := time.Now().Format("15:04")
-	now := "09:40"
+	now := time.Now().Format("15:04")
 	for _, task := range taskList.Task {
 		fmt.Println(now, task.ExecutingTime)
 		if now == task.ExecutingTime {
