@@ -77,6 +77,15 @@ func runningTask() {
 				// executing jobs
 				j := jobs.NewHttpRequestJobs(cfg, db)
 				j.PostHttpRequest()
+
+			case "POST_BULK_USER":
+				// write some information
+				fmt.Printf("task name : %s.\ndescription : %s. \n"+
+					"executing at %s \n", task.Name, task.Description, task.ExecutingTime)
+
+				// executing jobs
+				j := jobs.NewHttpRequestJobs(cfg, db)
+				j.BulkPostHttpRequest()
 			}
 		}
 	}

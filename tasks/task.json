@@ -11,6 +11,12 @@
       "name": "http request example post",
       "description": "This function will do some example http request",
       "executing_time": "09:40"
+    },
+    {
+      "key": "POST_BULK_USER",
+      "name": "http request example post",
+      "description": "This function will do some example http request",
+      "executing_time": "09:40"
     }
   ]
 }
